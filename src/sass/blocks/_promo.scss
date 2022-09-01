@@ -2,7 +2,7 @@
     min-height: 100vh;
     position: relative;
     background: url('../img/main_bg.jpg') no-repeat 50%/cover;
-    padding-top: 208px;
+    padding-top: 245px;
     padding-left: 10px;
     &__title {
         width: 530px;
@@ -15,18 +15,26 @@
         @include before-circle;
     }
     &__btns {
-        margin-top: 25px;
+        margin-top: 15px;
         width: 250px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
     }
     &__link {
         color: #fff;
         font-weight: bold;
         &:hover {
             text-decoration: none;
-            color: #fff;
+            color: #fff;            
+        }
+        &.about_me {
+            &:hover {
+                font-size: 20px; 
+                color: $main-color;           
+            }
+            
         }
     }
 
