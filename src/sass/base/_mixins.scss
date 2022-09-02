@@ -1,8 +1,8 @@
 @mixin before-circle {
     &:before {
         content: '';
-        width: 32px;
-        height: 32px;
+        width: 36px;
+        height: 36px;
         border-radius: 100%;
         background-color: $main-color;
         position: absolute;

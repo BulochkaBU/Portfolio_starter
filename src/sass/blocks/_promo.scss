@@ -6,7 +6,7 @@
     padding-left: 10px;
     &__title {
         width: 530px;
-        margin-top: 7px;
+        margin-top: 20px;
     }
     &__subtitle {
         position: relative;
@@ -29,7 +29,7 @@
             text-decoration: none;
             color: #fff;            
         }
-        &.about_me {
+        &_about-me {
             &:hover {
                 font-size: 20px; 
                 color: $main-color;           
