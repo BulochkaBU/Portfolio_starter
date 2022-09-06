@@ -7,7 +7,12 @@
         @include before-circle;
         &:before {
             left: 47%;
-            transform: translateX(-50%);
+            transform: translateX(-58%);
+        }
+        &_skills {
+            &:before {
+                left: 46%;
+            }
         }
     }
     &__title {
@@ -20,4 +25,5 @@
         background-color: $main-color;
         margin: 0 auto;
     }
+
 }
