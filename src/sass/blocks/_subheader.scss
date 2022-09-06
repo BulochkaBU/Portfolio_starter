@@ -1,0 +1,23 @@
+.subheader {
+
+    &__subtitle {
+        color: #000;
+        text-align: center;
+        position: relative;
+        @include before-circle;
+        &:before {
+            left: 47%;
+            transform: translateX(-50%);
+        }
+    }
+    &__title {
+        text-align: center;
+        margin: 25px 0;
+    }
+    &__divider {
+        width: 60px;
+        height: 3px;
+        background-color: $main-color;
+        margin: 0 auto;
+    }
+}
