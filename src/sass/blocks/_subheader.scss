@@ -1,5 +1,4 @@
 .subheader {
-
     &__subtitle {
         color: #000;
         text-align: center;
@@ -12,6 +11,11 @@
         &_skills {
             &:before {
                 left: 46%;
+            }
+        }
+        &_works {
+            &:before {
+                transform: translateX(-100%);
             }
         }
     }

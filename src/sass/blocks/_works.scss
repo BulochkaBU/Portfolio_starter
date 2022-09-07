@@ -1,0 +1,18 @@
+.works {
+    padding-top: 120px;
+    &__wrapper {
+        padding-top: 60px;
+        display: grid;
+        grid-template: repeat(2, 280px) / repeat(4, 280px);
+        gap: 5px;
+        grid-auto-rows: repeat(2, 280px);
+        .horizontal {
+            grid-row: 2 / 3;
+            grid-column: 2 / 4;
+        }
+        .vertical {
+            grid-column: 4 / 5;
+            grid-row: 1 / 3;
+        }
+    }
+}
