@@ -3,7 +3,7 @@
     position: relative;
     background: url('../img/main_bg.jpg') no-repeat 50%/cover;
     padding-top: 245px;
-    padding-left: 10px;
+    padding-left: 150px;
     &__title {
         width: 530px;
         margin-top: 20px;
@@ -16,7 +16,7 @@
     }
     &__btns {
         margin-top: 15px;
-        width: 250px;
+        width: 230px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -26,6 +26,7 @@
         color: #fff;
         font-weight: bold;
         transition: all 0.5s;
+        font-size: 14px;
         &:hover {
             text-decoration: none;
             color: #fff;            
@@ -33,9 +34,9 @@
 
         &_about-me {
             &:hover {
-                font-size: 20px; 
+                font-size: 15px; 
                 // color: $main-color;   
-                filter: drop-shadow(10px 10px 15px #fff);        
+                filter: drop-shadow(10px 10px 10px rgba(255, 255, 255, 0.582));        
             }
             
         }

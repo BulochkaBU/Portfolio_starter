@@ -1,0 +1,111 @@
+
+@media (max-width: 1200px) {
+    .promo {
+        padding-left: 70px;
+     }
+    .sidepanel {
+        left: 25px;
+    }
+    .about-me {
+        padding-left: 70px;
+        padding-top: 100px;
+        .grid-container {
+            grid-template: minmax(245px,auto) minmax(255px,auto) / 400px 480px;
+            column-gap: 25px;
+        }
+        .subgrid-container {
+            grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 230px);
+            column-gap: 20px;
+            .subgrid-elem {
+                grid-template-columns: 40px 170px;
+                column-gap: 14px;
+            }
+        }
+    
+    }
+
+}
+
+@media (max-width: 992px) {
+    .promo {
+        padding-left: 10px;
+    }
+    .sidepanel {
+        display: none;
+    }
+    .subheader {
+        &__title {
+            &_about-me {
+                font-size: 27px;
+                line-height: 35px;
+            }
+        }
+        &__subtitle {
+            &_about-me {
+                padding-left: 3px;
+            }
+        }
+    }
+    
+    .about-me {
+        padding-left: 10px;
+        .grid-container {
+            grid-template: minmax(245px,auto) minmax(255px,auto) / 458px 244px;
+            column-gap: 25px;
+        }
+        .subgrid-container {
+            grid-template-columns: 240px;
+            column-gap: 20px;
+            .subgrid-elem {
+                grid-template-columns: 40px 200px;
+                column-gap: 8px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .promo {
+        &__title {
+            width: 300px;
+            font-size: 28px;
+            line-height: 39px;
+        }
+        &__subtitle {
+            font-size: 17px;
+        }
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .promo {
+        padding-top: 200px;
+        padding-left: 10px;
+        &__title {
+            margin-top: 10px;
+            font-size: 25px;
+            line-height: 35px;
+        }
+        &__subtitle {
+            font-size: 16px;
+        }
+    }
+    .hamburger {
+        right: 20px;
+    }
+    .menu {
+        &__block {
+            width: 250px;
+        }
+        &__list {
+            padding-left: 20px;        
+        }
+        &__link {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+    }
+}

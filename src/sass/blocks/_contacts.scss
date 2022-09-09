@@ -82,6 +82,7 @@
         border: none;
         font-size: 14px;
         line-height: 21px;
+        transition: all 0.6s;
     }
     &__triggers {
         grid-column: 1 / 3;

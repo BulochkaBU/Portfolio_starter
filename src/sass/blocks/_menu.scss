@@ -59,7 +59,7 @@
         cursor: pointer;
         
         svg path {
-            transition: all .2s;
+            transition: all 0.6s;
             &:hover {
                 fill: $blue-grey-color;
             }
@@ -85,7 +85,7 @@
             height: 15px;
             border-radius: 100%;
             border: 1px solid #fff;
-            transition: all .5s;
+            transition: all 0.6s;
         } 
         &:hover {
             &:before {
@@ -96,7 +96,7 @@
             color: #FFFFFF;
             text-transform: uppercase;
             text-decoration: none;
-            transition: all .5s;
+            transition: all 0.6s;
             &:hover {
                 color: $blue-grey-color;
             }
@@ -112,7 +112,7 @@
         left: 50%;
         transform: translateX(-50%);
         svg path {  
-            transition: all .2s;          
+            transition: all 0.6s;          
             &:hover {                
                 fill: $blue-grey-color;
             }
