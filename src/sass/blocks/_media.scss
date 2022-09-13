@@ -1,5 +1,8 @@
 
 @media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
     .promo {
         padding-left: 70px;
      }
@@ -27,6 +30,9 @@
 }
 
 @media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
     .promo {
         padding-left: 10px;
     }
@@ -37,11 +43,14 @@
         &__title {
             &_about-me {
                 font-size: 27px;
-                line-height: 35px;
+                line-height: 45px;
             }
         }
         &__subtitle {
             &_about-me {
+                padding-left: 3px;
+            }
+            &_promo {
                 padding-left: 3px;
             }
         }
@@ -50,11 +59,16 @@
     .about-me {
         padding-left: 10px;
         .grid-container {
-            grid-template: minmax(245px,auto) minmax(255px,auto) / 458px 244px;
+            grid-template-columns: 400px auto;
             column-gap: 25px;
+            #grid-photo {
+                img {
+                    object-position: top;
+                }
+            }
         }
         .subgrid-container {
-            grid-template-columns: 240px;
+            grid-template-columns: 220px;
             column-gap: 20px;
             .subgrid-elem {
                 grid-template-columns: 40px 200px;
@@ -65,31 +79,55 @@
 }
 
 @media (max-width: 768px) {
-
+    .container {
+        max-width: 540px;
+    }
     .promo {
         &__title {
             width: 300px;
             font-size: 28px;
             line-height: 39px;
         }
+    }
+    .subheader {
         &__subtitle {
-            font-size: 17px;
+            &_promo {
+                font-size: 17px;
+            }
         }
     }
-    
+    .about-me {
+        padding-top: 40px;
+        .grid-container {
+            grid-template: 450px auto auto / 1fr;
+            row-gap: 30px;
+            #grid-photo {
+                grid-row: unset;
+            }
+        }
+        .subgrid-container {
+            grid-template-columns: repeat(2, 260px);
+            column-gap: 20px;
+            .subgrid-elem {
+                grid-template-columns: 40px 200px;
+                column-gap: 14px;
+            }
+        }
+    }
 }
 
 @media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
     .promo {
         padding-top: 200px;
-        padding-left: 10px;
         &__title {
+            width: 240px;
             margin-top: 10px;
             font-size: 25px;
             line-height: 35px;
-        }
-        &__subtitle {
-            font-size: 16px;
         }
     }
     .hamburger {
@@ -106,6 +144,46 @@
             font-size: 20px;
             line-height: 30px;
             margin-bottom: 10px;
+        }
+    }
+    .about-me {
+        padding-left: 0;
+        .grid-container {
+            grid-template: 250px auto auto / 1fr;
+            row-gap: 40px;
+        }
+        .subgrid-container {
+            grid-template-columns: 1fr;
+            column-gap: 20px;
+            .subgrid-elem {
+                grid-template-columns: 40px 200px;
+                column-gap: 14px;
+            }
+        }
+    }
+    .subheader {
+        &__subtitle {
+            &_promo {                
+                line-height: 27px;
+                &::before {
+                    
+                    transform: translateX(-47%);
+                }
+            }
+            &_about-me {
+                padding-left: 7px;
+            }
+        }
+    }
+    .title {
+        &_fz36 {
+            font-size: 24px;
+        }
+        &_fz19 {
+            font-size: 16px;
+        }
+        &_fz15 {
+            font-size: 15px;
         }
     }
 }

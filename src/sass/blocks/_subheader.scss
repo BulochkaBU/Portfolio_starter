@@ -8,6 +8,16 @@
             left: 47%;
             transform: translateX(-58%);
         }
+        &_promo {
+            text-align: left;
+            padding-left: 8px;
+            z-index: 2;
+            color: #fff;
+            &:before {
+                left: 2%;
+                transform: translateX(-60%);
+            }
+        }
         &_about-me {
             text-align: left;
             padding-left: 10px;

@@ -8,12 +8,6 @@
         width: 530px;
         margin-top: 20px;
     }
-    &__subtitle {
-        position: relative;
-        padding-left: 10px;
-        z-index: 2;
-        @include before-circle;
-    }
     &__btns {
         margin-top: 15px;
         width: 230px;
