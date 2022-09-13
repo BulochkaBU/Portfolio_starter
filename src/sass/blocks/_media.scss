@@ -33,6 +33,23 @@
             column-gap: 80px;
         }
     }
+    .skills {
+        padding-left: 70px;
+        &__wrapper {
+            grid-template-columns: repeat(3, minmax(250px, auto));
+            grid-template-rows: repeat(2, minmax(250px, auto));
+            grid-auto-rows: minmax(250px, auto);
+
+
+        }
+        &__rating {
+            padding-right: 10px;
+            grid-template-columns: repeat(3, minmax(270px, auto));
+            &-line {
+                width: 270px;
+            }
+        }
+    }
     .subheader {
         &__subtitle {
             &_about-me {
@@ -60,7 +77,7 @@
     .subheader {
         &__title {
             &_about-me {
-                font-size: 27px;
+                font-size: 26px;
                 line-height: 45px;
             }
         }
@@ -85,7 +102,7 @@
             column-gap: 25px;
             #grid-photo {
                 img {
-                    object-position: top;
+                    object-position: left;
                 }
             }
         }
@@ -113,6 +130,7 @@
         max-width: 540px;
     }
     .promo {
+
         &__title {
             width: 300px;
             font-size: 28px;
@@ -144,6 +162,9 @@
             row-gap: 30px;
             #grid-photo {
                 grid-row: unset;
+                img {
+                    object-position: bottom;
+                }
             }
         }
         .subgrid-container {
@@ -198,8 +219,13 @@
     .about-me {
         padding-left: 0;
         .grid-container {
-            grid-template: 250px auto auto / 1fr;
+            grid-template: 370px auto auto / 1fr;
             row-gap: 40px;
+            #grid-photo {
+                img {
+                    object-position: bottom;
+                }
+            }
         }
         .subgrid-container {
             grid-template-columns: 1fr;

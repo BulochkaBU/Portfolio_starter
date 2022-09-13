@@ -14,6 +14,7 @@
             z-index: 2;
             color: #fff;
             &:before {
+                background-color: rgba(127,255,0,0.8);
                 left: 2%;
                 transform: translateX(-60%);
             }

@@ -22,28 +22,28 @@ const divider = document.querySelector('.sidepanel__divider')
 const link = document.querySelectorAll('.sidepanel__link svg path')
 
 window.addEventListener("scroll", function() {
-    if (document.documentElement.scrollTop >= 250) {    
-        sidepanel.style.color = '#0f8853';
-        divider.style.background = '#0f8853';
+    if (document.documentElement.scrollTop >= 350) {    
+        sidepanel.style.color = '#7fff00';
+        divider.style.background = '#7fff00';
         link.forEach(item => {
-            item.style.fill = '#0f8853'
+            item.style.fill = '#7fff00'
             item.addEventListener('mouseenter', function() {
-                item.style.fill = '#324265'
+                item.style.fill = '#000'
             })
             item.addEventListener('mouseleave', function() {
-                item.style.fill = '#0f8853'
+                item.style.fill = '#7fff00'
             })
         })
     } else {        
-        sidepanel.style.color = '#fff';
-        divider.style.background = '#fff';
+        sidepanel.style.color = '#000';
+        divider.style.background = '#000';
         link.forEach(item => {
-            item.style.fill = '#fff'
+            item.style.fill = '#000'
             item.addEventListener('mouseenter', function() {
-                item.style.fill = '#0f8853'
+                item.style.fill = '#7fff00'
             })
             item.addEventListener('mouseleave', function() {
-                item.style.fill = '#fff'
+                item.style.fill = '#000'
             })
         })
     }
