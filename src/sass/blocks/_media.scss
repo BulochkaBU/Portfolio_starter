@@ -26,7 +26,25 @@
         }
     
     }
-
+    .experience {   
+        padding-top: 100px;
+        &__wrapper {
+            grid-template-columns: repeat(2, 370px);
+            column-gap: 80px;
+        }
+    }
+    .subheader {
+        &__subtitle {
+            &_about-me {
+                padding-left: 8px;
+            }
+            &_experience {
+                &:before {
+                    transform: translateX(-75%);
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -53,9 +71,13 @@
             &_promo {
                 padding-left: 3px;
             }
+            &_experience {
+                &::before {
+                    left: 46%;
+                }
+            }
         }
-    }
-    
+    }    
     .about-me {
         padding-left: 10px;
         .grid-container {
@@ -76,6 +98,14 @@
             }
         }
     }
+    .experience {   
+        &__wrapper {
+            padding-left: 10px;
+            padding-right: 10px;
+            grid-template-columns: repeat(2, 335px);
+            column-gap: 35px;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -90,9 +120,20 @@
         }
     }
     .subheader {
+        &__title {
+            margin: 15px 0;
+        }
         &__subtitle {
             &_promo {
                 font-size: 17px;
+            }
+            &_about-me {
+                padding-left: 9px;
+            }
+            &_experience {
+                &::before {
+                    transform: translateX(-96%);
+                }
             }
         }
     }
@@ -112,6 +153,14 @@
                 grid-template-columns: 40px 200px;
                 column-gap: 14px;
             }
+        }
+    }
+    .experience {   
+        padding-top: 40px;
+        &__wrapper {
+            padding-left: 65px;
+            grid-template-columns: 460px;
+            row-gap: 20px;
         }
     }
 }
@@ -162,16 +211,23 @@
         }
     }
     .subheader {
+        &__title {
+            margin: 10px 0;
+        }
         &__subtitle {
             &_promo {                
                 line-height: 27px;
-                &::before {
-                    
+                &::before {                    
                     transform: translateX(-47%);
                 }
             }
             &_about-me {
                 padding-left: 7px;
+            }
+            &_experience {
+                &::before {
+                    transform: translateX(-111%);
+                }
             }
         }
     }
@@ -184,6 +240,22 @@
         }
         &_fz15 {
             font-size: 15px;
+        }
+        &_fz14 {
+            line-height: 8px;
+        }
+    }
+    .experience {   
+        &__wrapper {
+            padding-left: 10px;
+            padding-top: 40px;
+            grid-template-columns: 270px;
+            row-gap: 20px;
+        }
+        &__item {          
+            &-location {
+                line-height: 20px;  
+            }
         }
     }
 }

@@ -31,6 +31,11 @@
                 left: 46%;
             }
         }
+        &_experience {
+            &:before {
+                transform: translateX(-58%);
+            }
+        }
         &_works {
             &:before {
                 transform: translateX(-100%);
