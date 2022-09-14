@@ -44,6 +44,7 @@
         }
         &__rating {
             padding-right: 10px;
+            padding-left: 10px;
             grid-template-columns: repeat(3, minmax(270px, auto));
             &-line {
                 width: 270px;
@@ -58,6 +59,11 @@
             &_experience {
                 &:before {
                     transform: translateX(-75%);
+                }
+            }
+            &_skills {
+                &:before {
+                    transform: translateX(-84%);
                 }
             }
         }
@@ -76,7 +82,9 @@
     }
     .subheader {
         &__title {
+            margin: 18px 0;
             &_about-me {
+                margin: 10px 0;
                 font-size: 26px;
                 line-height: 45px;
             }
@@ -93,9 +101,15 @@
                     left: 46%;
                 }
             }
+            &_skills {
+                &:before {
+                    left: 45%;
+                }
+            }
         }
     }    
     .about-me {
+        padding-top: 70px;
         padding-left: 10px;
         .grid-container {
             grid-template-columns: 400px auto;
@@ -116,11 +130,34 @@
         }
     }
     .experience {   
+        padding-top: 70px;
         &__wrapper {
             padding-left: 10px;
             padding-right: 10px;
             grid-template-columns: repeat(2, 335px);
             column-gap: 35px;
+        }
+    }
+    .skills {
+        padding-left: 10px;
+        padding-top: 70px;
+        &__wrapper {
+            padding-top: 40px;
+            grid-template-columns: repeat(3, minmax(200px, auto));
+            grid-template-rows: repeat(2, minmax(200px, auto));
+            grid-auto-rows: minmax(200px, auto);        
+        }
+
+        &__rating {
+            padding-top: 70px;
+            grid-template-columns: repeat(2, minmax(300px, auto));
+            row-gap: 50px;
+            &-line {
+                width: 327px;
+            }
+            &-item {
+                grid-template-rows: 21px 20px;
+            }
         }
     }
 }
@@ -130,7 +167,6 @@
         max-width: 540px;
     }
     .promo {
-
         &__title {
             width: 300px;
             font-size: 28px;
@@ -151,6 +187,11 @@
             &_experience {
                 &::before {
                     transform: translateX(-96%);
+                }
+            }
+            &_skills {
+                &:before {
+                    left: 43%;
                 }
             }
         }
@@ -179,9 +220,26 @@
     .experience {   
         padding-top: 40px;
         &__wrapper {
+            padding-top: 40px;
             padding-left: 65px;
             grid-template-columns: 460px;
             row-gap: 20px;
+        }
+    }
+    .skills {
+        padding-top: 40px;
+        &__wrapper {
+            grid-template-columns: repeat(2, minmax(250px, auto));
+            grid-template-rows: repeat(2, minmax(250px, auto));
+            grid-auto-rows: minmax(250px, auto);        
+        }
+
+        &__rating {
+            padding-top: 40px;
+            grid-template-columns: repeat(2, minmax(230px, auto));
+            &-line {
+                width: 237px;
+            }
         }
     }
 }
@@ -255,11 +313,16 @@
                     transform: translateX(-111%);
                 }
             }
+            &_skills {
+                &:before {
+                    left: 38%;
+                }
+            }
         }
     }
     .title {
         &_fz36 {
-            font-size: 24px;
+            font-size: 21px;
         }
         &_fz19 {
             font-size: 16px;
@@ -281,6 +344,22 @@
         &__item {          
             &-location {
                 line-height: 20px;  
+            }
+        }
+    }
+    .skills {
+        padding-left: 0;
+        padding-right: 0;
+        &__wrapper {
+            grid-template-columns: minmax(270px, auto);
+            grid-template-rows:  minmax(270px, auto);
+            grid-auto-rows:  minmax(270px, auto);      
+        }
+
+        &__rating {
+            grid-template-columns: minmax(270px, auto);   
+            &-line {
+                width: 273px;
             }
         }
     }
