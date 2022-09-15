@@ -11,7 +11,7 @@
     }
     .about-me {
         padding-left: 70px;
-        padding-top: 100px;
+        padding-top: 90px;
         .grid-container {
             grid-template: minmax(245px,auto) minmax(255px,auto) / 400px 480px;
             column-gap: 25px;
@@ -27,13 +27,14 @@
     
     }
     .experience {   
-        padding-top: 100px;
+        padding-top: 90px;
         &__wrapper {
             grid-template-columns: repeat(2, 370px);
             column-gap: 80px;
         }
     }
     .skills {
+        padding-top: 90px;
         padding-left: 70px;
         &__wrapper {
             grid-template-columns: repeat(auto-fit, 270px);
@@ -50,6 +51,10 @@
         }
     }
     .subheader {
+        padding-top: 90px;
+        &__title {
+            margin: 18px 0;
+        }
         &__subtitle {
             &_about-me {
                 padding-left: 8px;
@@ -73,11 +78,30 @@
         }
     }
     .works {
+        padding-top: 90px;
         &__wrapper {
             grid-template-columns: repeat(auto-fit, 280px);
             justify-content: end;
         }
 
+    }
+    .contacts {
+        padding-top: 90px;
+        &__wrapper {
+            padding-right: 0;
+            padding-left: 60px;
+            grid-template-columns: 320px 524px;
+        }
+        &__form {
+            grid-template-columns: 250px 250px;            
+            row-gap: 22px;
+        }
+        &__triggers {
+            column-gap: 17px;
+        }
+        &__btn {
+            width: 230px;
+        }
     }
 }
 
@@ -92,11 +116,15 @@
         display: none;
     }
     .subheader {
-        &__title {
-            margin: 18px 0;
+        &__title {            
             &_about-me {
                 margin: 10px 0;
                 font-size: 26px;
+                line-height: 45px;
+            }
+            &_contacts {
+                margin: 10px 0;
+                font-size: 30px;
                 line-height: 45px;
             }
         }
@@ -182,6 +210,38 @@
         }
 
     }
+    .contacts {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        &__wrapper {
+            padding-left: 20px;
+            grid-template-columns: 320px auto;
+            column-gap: 30px;
+                
+        }
+        &__form {            
+            grid-template-columns: 1fr;
+            grid-template-rows: 40px 40px 120px minmax(40px,auto); 
+            row-gap: 28px;  
+        }
+        &__textarea {
+            grid-column: unset;
+        }
+        &__triggers {
+            grid-column: unset;
+            grid-template-columns: auto;
+            grid-template-rows: 20px 40px;
+            row-gap: 12px;   
+            column-gap: 0;   
+        }
+        &__text, &__social {
+            margin-top: 15px;
+            
+        }
+        &__policy {
+            grid-row: 1;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -214,6 +274,12 @@
             &_skills {
                 &:before {
                     left: 43%;
+                }
+            }
+            &_works {
+                &::before {                    
+                    left: 41%;
+                    transform: translateX(-63%);
                 }
             }
         }
@@ -253,6 +319,7 @@
         padding-top: 40px;
         &__wrapper {
             justify-content: center;
+            padding-top: 40px;
         }
         &__rating {
             padding-top: 40px;
@@ -264,9 +331,31 @@
         padding-top: 40px;
         &__wrapper {
             padding-top: 40px;
-            gap: 15px
+            gap: 15px;
         }
 
+    }
+    .contacts {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        &__wrapper {            
+            grid-template: 1fr / 1fr;
+            row-gap: 30px;
+            padding-left: 100px;
+        }
+        &__photo {
+            display: none;
+        }
+        &__form {
+            grid-template-columns: 350px;
+            row-gap: 20px;
+        }
+        &__btn {
+            margin: 0 auto;
+        }
+        &__policy {
+            margin: 0 auto;
+        }
     }
     
 }
@@ -351,6 +440,7 @@
                     left: 34%;
                 }
             }
+
         }
     }
     .title {
@@ -385,6 +475,25 @@
         padding-right: 0;
         &__rating {
             grid-template-columns: repeat(auto-fit, 270px);
+        }
+    }
+    .contacts {
+         &__wrapper {            
+            padding-left: 10px;
+        }
+        &__form {
+            grid-template-columns: 270px;
+        }
+        &__text {
+            line-height: 20px;
+            font-size: 13px;
+        }
+        &__policy {
+            line-height: 18px;
+            font-size: 11px;
+            input {
+                margin-right: 5px;
+            }
         }
     }
 }
