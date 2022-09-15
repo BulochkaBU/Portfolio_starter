@@ -36,19 +36,17 @@
     .skills {
         padding-left: 70px;
         &__wrapper {
-            grid-template-columns: repeat(3, minmax(250px, auto));
-            grid-template-rows: repeat(2, minmax(250px, auto));
-            grid-auto-rows: minmax(250px, auto);
-
-
+            grid-template-columns: repeat(auto-fit, 270px);
+            justify-content: space-between;
+            column-gap: 0;
         }
         &__rating {
             padding-right: 10px;
             padding-left: 10px;
-            grid-template-columns: repeat(3, minmax(270px, auto));
-            &-line {
-                width: 270px;
-            }
+            grid-template-columns: repeat(auto-fit, 350px);
+            justify-content: space-between;
+            column-gap: 0;
+
         }
     }
     .subheader {
@@ -66,7 +64,20 @@
                     transform: translateX(-84%);
                 }
             }
+            &_works {
+                &:before {
+                    left: 45%;
+                    transform: translateX(-66%);
+                }
+            }
         }
+    }
+    .works {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 280px);
+            justify-content: end;
+        }
+
     }
 }
 
@@ -106,13 +117,19 @@
                     left: 45%;
                 }
             }
+            &_works {
+                &:before {
+                    left: 43%;
+                    transform: translateX(-58%);
+                }
+            }
         }
     }    
     .about-me {
         padding-top: 70px;
         padding-left: 10px;
         .grid-container {
-            grid-template-columns: 400px auto;
+            grid-template-columns: 350px auto;
             column-gap: 25px;
             #grid-photo {
                 img {
@@ -141,24 +158,29 @@
     .skills {
         padding-left: 10px;
         padding-top: 70px;
-        &__wrapper {
-            padding-top: 40px;
-            grid-template-columns: repeat(3, minmax(200px, auto));
-            grid-template-rows: repeat(2, minmax(200px, auto));
-            grid-auto-rows: minmax(200px, auto);        
-        }
-
         &__rating {
             padding-top: 70px;
-            grid-template-columns: repeat(2, minmax(300px, auto));
+            grid-template-columns: repeat(auto-fit, 320px);
             row-gap: 50px;
             &-line {
-                width: 327px;
+                width: 100%;
             }
             &-item {
                 grid-template-rows: 21px 20px;
             }
         }
+    }
+    .works {
+        padding-top: 70px;
+        &__wrapper {
+            .horizontal, .vertical {
+                grid-row: unset;
+                grid-column: unset;
+            }
+            justify-content: space-evenly;
+            gap: 50px
+        }
+
     }
 }
 
@@ -220,6 +242,7 @@
     .experience {   
         padding-top: 40px;
         &__wrapper {
+            justify-content: center;
             padding-top: 40px;
             padding-left: 65px;
             grid-template-columns: 460px;
@@ -229,19 +252,23 @@
     .skills {
         padding-top: 40px;
         &__wrapper {
-            grid-template-columns: repeat(2, minmax(250px, auto));
-            grid-template-rows: repeat(2, minmax(250px, auto));
-            grid-auto-rows: minmax(250px, auto);        
+            justify-content: center;
         }
-
         &__rating {
             padding-top: 40px;
-            grid-template-columns: repeat(2, minmax(230px, auto));
-            &-line {
-                width: 237px;
-            }
+            grid-template-columns: repeat(auto-fit, 320px);
+            justify-content: center;
         }
     }
+    .works {
+        padding-top: 40px;
+        &__wrapper {
+            padding-top: 40px;
+            gap: 15px
+        }
+
+    }
+    
 }
 
 @media (max-width: 576px) {
@@ -286,7 +313,8 @@
             }
         }
         .subgrid-container {
-            grid-template-columns: 1fr;
+            grid-template-columns: 290px;
+            justify-content: center;
             column-gap: 20px;
             .subgrid-elem {
                 grid-template-columns: 40px 200px;
@@ -318,6 +346,11 @@
                     left: 38%;
                 }
             }
+            &_works {
+                &:before {
+                    left: 34%;
+                }
+            }
         }
     }
     .title {
@@ -337,7 +370,7 @@
     .experience {   
         &__wrapper {
             padding-left: 10px;
-            padding-top: 40px;
+
             grid-template-columns: 270px;
             row-gap: 20px;
         }
@@ -350,17 +383,8 @@
     .skills {
         padding-left: 0;
         padding-right: 0;
-        &__wrapper {
-            grid-template-columns: minmax(270px, auto);
-            grid-template-rows:  minmax(270px, auto);
-            grid-auto-rows:  minmax(270px, auto);      
-        }
-
         &__rating {
-            grid-template-columns: minmax(270px, auto);   
-            &-line {
-                width: 273px;
-            }
+            grid-template-columns: repeat(auto-fit, 270px);
         }
     }
 }
