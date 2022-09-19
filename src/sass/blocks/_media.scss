@@ -94,7 +94,7 @@
         }
         &__form {
             grid-template-columns: 250px 250px;            
-            row-gap: 22px;
+            row-gap: 30px;
         }
         &__triggers {
             column-gap: 17px;
@@ -231,7 +231,7 @@
             grid-column: unset;
             grid-template-columns: auto;
             grid-template-rows: 20px 40px;
-            row-gap: 12px;   
+            row-gap: 27px;   
             column-gap: 0;   
         }
         &__text, &__social {
@@ -348,7 +348,7 @@
         }
         &__form {
             grid-template-columns: 350px;
-            row-gap: 20px;
+            row-gap: 30px;
         }
         &__btn {
             margin: 0 auto;

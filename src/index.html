@@ -72,11 +72,11 @@
             </div>
             <nav>
                 <ul class="menu__list">
-                    <li class="menu__link"><a href="#">ПРО меня</a></li>
-                    <li class="menu__link"><a href="#">Про ОПЫТ</a></li>
-                    <li class="menu__link"><a href="#">про НАВЫКИ</a></li>
-                    <li class="menu__link"><a href="#">про проекты</a></li>
-                    <li class="menu__link"><a href="#">про КОНТАКТЫ</a></li>
+                    <li class="menu__link"><a href="#about-me">ПРО меня</a></li>
+                    <li class="menu__link"><a href="#experience">Про ОПЫТ</a></li>
+                    <li class="menu__link"><a href="#skills">про НАВЫКИ</a></li>
+                    <li class="menu__link"><a href="#works">про проекты</a></li>
+                    <li class="menu__link"><a href="#contacts">про КОНТАКТЫ</a></li>
                 </ul>
             </nav>
             <div class="menu__social">
@@ -110,13 +110,13 @@
             <div class="title title_fz19 title_fz15 subheader__subtitle subheader__subtitle_promo">Меня зовут Анастасия Прудинская</div>
             <h1 class="title title_fz48 promo__title">Я веб-разработчик <br> в Монтенегро</h1>
             <div class="promo__btns">
-                <a href="#" class="promo__link btn">Портфолио</a>
-                <a href="#" class="promo__link promo__link_about-me">Про меня</a>
+                <a href="#works" class="promo__link btn">Портфолио</a>
+                <a href="#about-me" class="promo__link promo__link_about-me">Про меня</a>
             </div>
         </div>
     </section>
 
-    <section class="about-me">
+    <section class="about-me" id="about-me">
         <div class="container">
             <div class="grid-container">
                 <div class="grid-elem" id="grid-photo">
@@ -176,7 +176,7 @@
         </div>
     </section>
 
-    <section class="experience">
+    <section class="experience" id="experience">
         <div class="container">
             <div class="title title_fz19 subheader__subtitle subheader__subtitle_experience">Про опыт</div>
             <h2 class="title title_fz36 subheader__title subheader__title_experience">Чем я буду полезна</h2>
@@ -253,7 +253,7 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
         <div class="container">
             <div class="title title_fz19 subheader__subtitle subheader__subtitle_skills">Про навыки</div>
             <h2 class="title title_fz36 subheader__title">Что я использую в работе</h2>
@@ -330,7 +330,7 @@
         </div>
     </section>
 
-    <section class="works">
+    <section class="works" id="works">
         <div class="container">
             <div class="title title_fz19 subheader__subtitle subheader__subtitle_works">Про проекты</div>
             <h2 class="title title_fz36 subheader__title">Мои работы</h2>
@@ -358,7 +358,7 @@
         </div>
     </section>
     
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="container">
             <div class="contacts__wrapper">
                 <div class="contacts__photo">
@@ -391,23 +391,23 @@
                     <div class="title title_fz14 contacts__text">Или оставьте ваши данные и я сама вам напишу:</div>
 
                     <form action="#" class="contacts__form">
-                        <div class="contacts__input">
-                            <input required name='name' id="name" type="text">
+                        <div class="contacts__input name">
+                            <input name='name' id="name" type="text" maxlength="30">
                             <label for="name">Ваше имя</label>
                         </div>
-                        <div class="contacts__input">
-                            <input required name="email" id="email" type="email">
+                        <div class="contacts__input email">
+                            <input name="email" id="email" type="email" >
                             <label for="email">Ваша почта</label>
                         </div>
                         <div class="contacts__textarea">
-                            <textarea name="text" id="text"></textarea>
+                            <textarea name="text" id="text" maxlength="200"></textarea>
                             <label for="text">Ваше сообщение</label>
                         </div>
                         <div class="contacts__triggers">
                             <button class="btn contacts__btn">Отправить сообщение</button>
                             <div class="contacts__policy">
-                                <input required type="checkbox">
-                                <span>Я согласен(а) с <a href="/policy.html">политикой конфиденциальности</a></span>
+                                <input name="policy" type="checkbox" id="policy">
+                                <label>Я согласен(а) с <a href="/policy.html">политикой конфиденциальности</a></label>
                             </div>
                         </div>
                     </form>
@@ -416,6 +416,9 @@
         </div>
     </section>
 
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

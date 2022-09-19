@@ -49,3 +49,51 @@ window.addEventListener("scroll", function() {
     }
 })
 
+const form = document.querySelector('.contacts__form');
+
+
+
+//validation form
+function validateForms(form){
+    $(form).validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            policy: 'required'
+
+        },
+        messages: {            
+            name: {                
+                required: "Пожалуйста, введите свое имя",
+                minlength: jQuery.validator.format("Введите {0} символа!")
+            },
+            email: {
+                required: "Пожалуйста, введите свою почту",
+                email: "Неправильно введен адрес почты"
+            },
+            policy: {
+                required: 'Пожалуйста, установите флажок'
+            }
+        }
+    });
+    
+};
+
+validateForms('form');
+
+
+// $(document).ready(function() {
+//     $('.contacts__form').submit(function(e) {
+//         e.preventDefault();
+        
+
+//     });
+//   });
+
+
