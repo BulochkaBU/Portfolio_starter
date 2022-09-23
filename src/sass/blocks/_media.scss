@@ -100,7 +100,11 @@
             column-gap: 17px;
         }
         &__btn {
-            width: 230px;
+            width: 200px;
+            padding: 12px 16px;
+        }
+        .error  {
+            top: -6px;
         }
     }
 }
@@ -240,7 +244,11 @@
         }
         &__policy {
             grid-row: 1;
+            .error  {
+                top: 5px;
+            }
         }
+
     }
 }
 
@@ -483,6 +491,7 @@
         }
         &__form {
             grid-template-columns: 270px;
+            row-gap: 25px;
         }
         &__text {
             line-height: 20px;
@@ -493,6 +502,13 @@
             font-size: 11px;
             input {
                 margin-right: 5px;
+            }
+            label {
+                font-size: 11px;
+                padding: 0;
+            }
+            .error {
+                top: -7px;
             }
         }
     }

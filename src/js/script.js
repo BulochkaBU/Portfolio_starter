@@ -1,3 +1,4 @@
+//menu hamburger
 const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu');
 const closeMenu = document.querySelector('.menu__close');
@@ -10,6 +11,7 @@ closeMenu.addEventListener('click', () => {
     menu.classList.remove('active')
 })
 
+// rating skills
 const counters = document.querySelectorAll('.skills__rating-counter')
       lines = document.querySelectorAll('.skills__rating-line span');
 
@@ -17,6 +19,7 @@ counters.forEach((item, i) => {
     lines[i].style.width = item.innerHTML;
 })
 
+//change color sidepanel
 const sidepanel = document.querySelector('.sidepanel')
 const divider = document.querySelector('.sidepanel__divider')
 const link = document.querySelectorAll('.sidepanel__link svg path')
@@ -49,51 +52,74 @@ window.addEventListener("scroll", function() {
     }
 })
 
-const form = document.querySelector('.contacts__form');
 
+$(document).ready(function() {
+    //validation form
+    function validateForms(form){
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                policy: 'required'
 
-
-//validation form
-function validateForms(form){
-    $(form).validate({
-        rules: {
-            name: {
-                required: true,
-                minlength: 2
             },
-            email: {
-                required: true,
-                email: true
-            },
-            policy: 'required'
-
-        },
-        messages: {            
-            name: {                
-                required: "Пожалуйста, введите свое имя",
-                minlength: jQuery.validator.format("Введите {0} символа!")
-            },
-            email: {
-                required: "Пожалуйста, введите свою почту",
-                email: "Неправильно введен адрес почты"
-            },
-            policy: {
-                required: 'Пожалуйста, установите флажок'
+            messages: {            
+                name: {                
+                    required: "Пожалуйста, введите свое имя",
+                    minlength: jQuery.validator.format("Введите {0} символа!")
+                },
+                email: {
+                    required: "Пожалуйста, введите свою почту",
+                    email: "Неправильно введен адрес почты"
+                },
+                policy: {
+                    required: 'Пожалуйста, установите флажок'
+                }
             }
-        }
-    });
-    
-};
-
-validateForms('form');
-
-
-// $(document).ready(function() {
-//     $('.contacts__form').submit(function(e) {
-//         e.preventDefault();
+        });
         
+    };
 
-//     });
-//   });
+    validateForms('form');
+
+    // send form email
+
+    $('form').submit(function(e) {
+        e.preventDefault();
+        if (!$(this).valid()){
+            return;
+        }
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+            
+        }).done(function() {
+            console.log('post')
+            $(this).find("input").val("");
+            $('.modal').fadeIn();
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+
+  });
+
+
+
+// modal close
+const closeModal = document.querySelector('.modal__close')
+const modal = document.querySelector('.modal')
+
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none'
+})
 
 
